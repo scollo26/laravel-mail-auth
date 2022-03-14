@@ -77,36 +77,36 @@ export default {
             errors: {},
         };
     },
-    // methods: {
-    //     sendForm() {
-    //         this.sending = true;
-    //         this.success = false;
-    //         axios
-    //             .post("/api/contacts", {
-    //                 name: this.name,
-    //                 email: this.email,
-    //                 message: this.message,
-    //             })
-    //             .then((response) => {
-    //                 console.log(response.data);
-    //                 if (!response.data.success) {
-    //                     this.success = false;
-    //                     this.errors = response.data.errors;
-    //                 } else {
-    //                     this.success = true;
-    //                     this.errors = {};
-    //                     this.name = "";
-    //                     this.email = "";
-    //                     this.message = "";
-    //                 }
-    //                 this.sending = false;
-    //             })
-    //             .catch((error) => {
-    //                 console.log(error.response.data);
-    //                 this.sending = false;
-    //             });
-    //     },
-    // },
+    methods: {
+        sendForm() {
+            this.sending = true;
+            this.success = false;
+            axios
+                .post("/api/contacts", {
+                    name: this.name,
+                    email: this.email,
+                    message: this.message,
+                })
+                .then((response) => {
+                    console.log(response.data);
+                    if (!response.data.success) {
+                        this.success = false;
+                        this.errors = response.data.errors;
+                    } else {
+                        this.success = true;
+                        this.errors = {};
+                        this.name = "";
+                        this.email = "";
+                        this.message = "";
+                    }
+                    this.sending = false;
+                })
+                .catch((error) => {
+                    console.log(error.response.data);
+                    this.sending = false;
+                });
+        },
+    },
 };
 </script>
 
