@@ -32,4 +32,4 @@ Route::middleware('auth')
 
 Route::get("{any?}", function () {
         return view("guest.welcome");
-    })->where("any", ".*")->name('guest.index');
+    })->where("any", ".*");
