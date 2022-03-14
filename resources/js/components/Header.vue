@@ -15,7 +15,10 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div
+                class="collapse navbar-collapse d-flex justify-content-center"
+                id="navbarSupportedContent"
+            >
                 <ul class="navbar-nav mr-auto">
                     <li
                         class="nav-item"
@@ -61,8 +64,4 @@ export default {
 };
 </script>
 
-<style lang="scss">
-.navbar-brand1 {
-    width: 50%;
-}
-</style>
+<style lang="scss"></style>
